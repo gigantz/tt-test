@@ -1,0 +1,11 @@
+export const START_GAME = "START_GAME";
+export const PAUSE_GAME = "PAUSE_GAME";
+export const RESUME_GAME = "RESUME_GAME";
+export const ADD_TO_LEFT = "ADD_TO_LEFT";
+export const ADD_TO_RIGHT = "ADD_TO_RIGHT";
+export const ADD_MOVING_SHAPE = "ADD_MOVING_SHAPE";
+export const CALC_BENDING = "CALC_BENDING";
+export const MOVE_LEFT = "MOVE_LEFT";
+export const MOVE_RIGHT = "MOVE_RIGHT";
+export const GAME_OVER = "GAME_OVER";
+export const YOU_WON = "YOU_WON";
