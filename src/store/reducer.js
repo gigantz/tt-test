@@ -5,7 +5,7 @@ const initialState = {
   paused: false,
   gameOver: false,
   youWon: false,
-  bending: 20,
+  bending: 15,
   left: [],
   right: [],
   moving: []
@@ -23,7 +23,7 @@ export default (state = initialState, { type, payload }) => {
         moving: [generateRandomShape()],
         right: [generateRandomShape()],
         left: [],
-        bending: 20
+        bending: 15
       };
     case t.GAME_OVER:
       return {

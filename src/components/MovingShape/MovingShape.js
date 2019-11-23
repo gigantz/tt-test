@@ -34,7 +34,7 @@ class MovingShape extends React.Component {
       }
     }
 
-    if (this.state.top + this.props.size * 2 > this.boardPosition()) {
+    if ((this.state.top + this.props.size) * 1.2 >= this.boardPosition()) {
       this.shapeLanded();
     }
   }
@@ -45,7 +45,7 @@ class MovingShape extends React.Component {
   }
 
   dropShapes = () => {
-    this.setState(state => ({ ...state, top: state.top + 16 }));
+    this.setState(state => ({ ...state, top: state.top + 10 }));
   };
 
   moveShape = e => {

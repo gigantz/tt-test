@@ -17,13 +17,16 @@ function* boardBending() {
       ? ((leftSum - rightSum) / leftSum) * -100
       : ((rightSum - leftSum) / rightSum) * 100;
 
-  if (Math.abs(bending) >= MAX_BENDING) {
+  if (bending >= MAX_BENDING) {
     yield put(calcBending(MAX_BENDING));
+    yield put(gameOver());
+  } else if (bending <= -MAX_BENDING) {
+    yield put(calcBending(-MAX_BENDING));
     yield put(gameOver());
   } else {
     yield put(calcBending(bending));
-    yield put(addToRight());
     yield put(addMovingShape());
+    yield put(addToRight());
   }
 }
 
